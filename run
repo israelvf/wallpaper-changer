@@ -1,9 +1,0 @@
-#!/bin/sh
-LOGS_DIR=logs
-
-if [ ! -d "$LOGS_DIR" ]; then
-  mkdir "$LOGS_DIR";
-fi
-
-nohup sh app.sh > logs/app.log 2>&1 &
-echo $! > logs/pid.log
